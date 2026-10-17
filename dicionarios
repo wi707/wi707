@@ -1,0 +1,18 @@
+from random import randint
+um= randint(0,101)
+dois=randint(0,101)
+tres=randint(0,101)
+quatro=randint(0,101)
+sorteio={'um':um,'dois':dois,'três':tres,'quatro':quatro}
+
+sorteio= dict(sorted(sorteio.items(), key=lambda item: item[1], reverse=True))
+
+print(f' o número um e:\033[1,34m {um}\033[0m')
+print(f'O número dois e:\033[1,34m{dois}\033[0m')
+print(f'O número três e: \033[1,34m{tres}\033[0m')
+print(f'O número quatro e:\033[1,34m{quatro}\033[0m')
+
+for posiçao, numero in enumerate(sorteio.values(), 1):
+    print(f' Top {posiçao}: {numero}')
+
+print(sorteio)

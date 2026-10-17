@@ -1,0 +1,32 @@
+casasimples=250000
+casagrande=500000
+casanapraia=750000
+mansao=1000000
+
+
+print("Temos estas casas disponiveis")
+print("1- Casa simples")
+print("2-Casa grande")
+print("3-Casa na praia")
+print("4- Mansão")
+
+escolha=int(input("Escolha uma casa"))
+if escolha==1:
+    print(f"o valor da casa e \033[2;34m{casasimples} \033[0;m reais ")
+
+    salario=int(input("Digite o seu salario"))
+    tempodepago=int(input("Quanto tempo desejas pagar a casa?"))
+
+    mensalidade= casasimples/tempodepago
+    print(round(mensalidade))
+    salariominimo=salario*0.30
+
+    if mensalidade>salariominimo:
+     print("Você não pode comprar")
+     exit()
+    
+elif escolha==2:
+  print(f"o valor da casa e \033[2;34m{casagrande} reais")
+
+  salario=int(input("Digite o seu salario"))
+  tempodepago=int(input("Quanto tempo desejas pagar a casa?"))
